@@ -1,0 +1,239 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca Mundo da Leitura</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f5f1e8;
+            color: #333;
+        }
+
+        header {
+            background-color: #4b3526;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        nav {
+            background-color: #74543c;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav button {
+            background-color: #74543c;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            margin: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        nav button:hover {
+            background-color: #a77b50;
+        }
+
+        .conteudo {
+            display: none;
+            padding: 30px;
+            max-width: 1000px;
+            margin: auto;
+            background-color: white;
+            min-height: 450px;
+        }
+
+        .ativo {
+            display: block;
+        }
+
+        h2 {
+            color: #74543c;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin: 15px 0;
+        }
+
+        footer {
+            background-color: #4b3526;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Biblioteca Mundo da Leitura</h1>
+        <p>O conhecimento começa com a leitura!</p>
+    </header>
+
+    <!-- MENU DE ABAS -->
+    <nav>
+        <button onclick="abrirAba('inicio')">Início</button>
+
+        <button onclick="abrirAba('sobre')">
+            Sobre a Biblioteca
+        </button>
+    </nav>
+
+    <main>
+
+        <!-- ABA INÍCIO -->
+        <section id="inicio" class="conteudo ativo">
+
+            <h2>Bem-vindo à Biblioteca Mundo da Leitura!</h2>
+
+            <p>
+                A Biblioteca Mundo da Leitura é um espaço dedicado
+                à cultura, ao conhecimento e à imaginação.
+                Nosso objetivo é incentivar o hábito da leitura,
+                proporcionando aos leitores acesso a diferentes
+                histórias, conhecimentos e experiências.
+            </p>
+
+            <p>
+                Aqui você encontra livros de diversos gêneros,
+                como romance, aventura, fantasia, suspense,
+                literatura infantil e muito mais.
+                Acreditamos que a leitura transforma vidas,
+                amplia horizontes e abre portas para novas descobertas.
+            </p>
+
+            <h2>Livros em Destaque</h2>
+
+            <img src="livrosgerais.jpg"
+                 alt="Coleção de livros da saga Eragon"
+                 width="400">
+
+            <p>
+                Conheça a famosa saga Eragon, escrita por
+                Christopher Paolini, uma emocionante história
+                de fantasia, dragões e aventuras.
+            </p>
+
+            <ol>
+                <li>Eragon - 2002</li>
+                <li>Eldest - 2005</li>
+                <li>Brisingr - 2008</li>
+                <li>Herança - 2011</li>
+            </ol>
+
+            <h2>Venha conhecer nossa biblioteca!</h2>
+
+            <p>
+                Explore nosso espaço, descubra novos livros
+                e permita-se viajar pelo universo da leitura.
+            </p>
+
+        </section>
+
+        <!-- ABA SOBRE A BIBLIOTECA -->
+        <section id="sobre" class="conteudo">
+
+            <h2>Quem Somos</h2>
+
+            <img src="biblioteca.jpg"
+                 alt="Estantes de livros em uma biblioteca"
+                 width="450">
+
+            <p>
+                A Biblioteca Mundo da Leitura é um espaço criado
+                para aproximar pessoas do universo dos livros.
+                Somos apaixonados pelo conhecimento e acreditamos
+                que a leitura é uma ferramenta essencial para
+                o desenvolvimento pessoal e educacional.
+            </p>
+
+            <p>
+                Nosso propósito é oferecer um ambiente acolhedor,
+                onde crianças, jovens e adultos possam descobrir
+                novas histórias, desenvolver a criatividade e
+                ampliar seus conhecimentos.
+            </p>
+
+            <h2>Nossa Missão</h2>
+
+            <p>
+                Incentivar a leitura, promover a educação e
+                facilitar o acesso à informação e à cultura,
+                contribuindo para a formação de cidadãos
+                mais conscientes e criativos.
+            </p>
+
+            <h2>Nossa Visão</h2>
+
+            <p>
+                Ser reconhecida como um espaço de referência
+                no incentivo à leitura, ao aprendizado e à
+                transformação por meio do conhecimento.
+            </p>
+
+            <h2>Nossos Valores</h2>
+
+            <ul>
+                <li>Amor pela leitura e pelo conhecimento.</li>
+                <li>Respeito à diversidade.</li>
+                <li>Incentivo à educação.</li>
+                <li>Acesso à cultura e à informação.</li>
+                <li>Criatividade e imaginação.</li>
+            </ul>
+
+            <h2>Nosso Espaço</h2>
+
+            <img src="sobrebiblioteca.jpg"
+                 alt="Ambiente aconchegante"
+                 width="450">
+
+            <p>
+                Mais do que um lugar cheio de livros,
+                somos um ambiente de descobertas,
+                aprendizado e inspiração.
+                Cada livro representa uma nova oportunidade
+                de conhecer o mundo!
+            </p>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Biblioteca Mundo da Leitura - 2026</p>
+        <p>O conhecimento começa com a leitura!</p>
+    </footer>
+
+    <!-- SCRIPT PARA TROCAR AS ABAS -->
+    <script>
+
+        function abrirAba(nomeAba) {
+
+            let conteudos = document.querySelectorAll(".conteudo");
+
+            conteudos.forEach(function(conteudo) {
+                conteudo.classList.remove("ativo");
+            });
+
+            document.getElementById(nomeAba).classList.add("ativo");
+
+        }
+
+    </script>
+
+</body>
+</html>
